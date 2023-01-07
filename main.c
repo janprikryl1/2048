@@ -58,37 +58,12 @@ int main()
     srand(time(0)); //Inicializace random čísel podle času v systému
     //Pole pro herná režim 1
     int pole_1[4][4];
-    for (int i = 0; i < 4; i++)
-    {
-        for (int x = 0; x < 4; x++)
-        {
-            pole_1[i][x] = 0;
-        }
-    }
-    pole_1[rand() % 4 + 0][rand() % 4 + 0] = 2;
-    
     //Inicializace herního režimu 2
-    int pole_2[12][8];
-    for (int i = 0; i < 12; i++)
-    {
-        for (int x = 0; x < 8; x++)
-        {
-            pole_2[i][x] = 0;
-        }
-    }
-    pole_2[rand() % 12 + 0][rand() % 8 + 0] = 2;
-    
+    int pole_2[8][12];
     //Inicializace herního režimu 3
     int pole_3[3][3];
-    for (int i = 0; i < 3; i++)
-    {
-        for (int x = 0; x < 3; x++)
-        {
-            pole_3[i][x] = 0;
-        }
-    }
-    pole_3[rand() % 3 + 0][rand() % 3 + 0] = 2;
 
+    
 
 
     while (!quit) // Projdu všechny události (z klávesnice, myši) a zpracuju je. Poté jdu dál
@@ -106,19 +81,76 @@ int main()
                 switch( e.key.keysym.sym ){
                     case SDLK_LEFT:
                         printf("Left\n");
-                        rules = false;
+                        if (game_mode == 1) {
+                            for (int r = 0; r < 4; r++)
+                            {
+                                if (pole_1[r][0] && (pole_1[r][0] == pole_1[r][1])){
+                                    pole_1[r][0] = pole_1[r][0]*2;
+                                    pole_1[r][1] = 0;
+                                }
+                                if (pole_1[r][1] && (pole_1[r][1] == pole_1[r][2])) {
+                                    pole_1[r][1] = pole_1[r][1] * 2;
+                                    pole_1[r][2] = 0;
+                                }
+                                if (pole_1[r][2] && (pole_1[r][2] == pole_1[r][3])) {
+                                    pole_1[r][2] = pole_1[r][2] * 2;
+                                    pole_1[r][3] = 0;
+                                }   
+                                //Teď najít maximum a napsat to do score
+                                for (int c = 0; c < 4; c++)
+                                {
+                                    for (int r = 0; r < 4; c++)
+                                    {
+                                        /* code */
+                                    }
+                                    
+                                }
+                                
+
+
+                                if (pole_1[r][0] == 0){
+                                    pole_1[r][0] = pole_1[r][1];
+                                    pole_1[r][1] = pole_1[r][2];    
+                                    pole_1[r][2] = pole_1[r][3];
+                                    pole_1[r][3] = 0;
+                                }
+                                else if (pole_1[r][1] == 0) {
+                                    pole_1[r][1] = pole_1[r][2];    
+                                    pole_1[r][2] = pole_1[r][3];
+                                    pole_1[r][3] = 0;
+                                }  
+                                else if (pole_1[r][2] == 0) {
+                                    pole_1[r][2] = pole_1[r][3]; 
+                                    pole_1[r][3] = 0;  
+                                }
+                                else if (pole_1[r][3] == 0) {
+                                    pole_1[r][3] = 0;
+                                }                              
+                            }
+                            if(pole_1[0][0] && pole_1[0][1] && pole_1[0][2] && pole_1[0][3] && pole_1[1][0] && pole_1[1][1] && pole_1[1][2] && pole_1[1][3] && pole_1[2][0] && pole_1[2][1] && pole_1[2][2] && pole_1[2][3] && pole_1[3][0] && pole_1[3][1] && pole_1[3][2] && pole_1[3][3]) {
+                                game_over = true;
+                                game = false;                            
+                                break;
+                            }
+
+                            int new_x = rand() % 4 + 0;
+                            int new_y = rand() % 4 + 0;
+                            while (pole_1[new_x][new_y] != 0) {
+                                new_x = rand() % 4 + 0;
+                                new_y = rand() % 4 + 0;
+                            }
+                            pole_1[new_x][new_y] = 2;
+                            
+                        }                        
                         break;
                     case SDLK_RIGHT:
-                        printf("right\n");
-                        rules = false;
+                        printf("right\n");                        
                         break;
                     case SDLK_UP:
-                        printf("up\n");
-                        rules = false;
+                        printf("up\n");                        
                         break;
                     case SDLK_DOWN:
                         printf("down\n");
-                        rules = false;
                         break;
                     case 110:
                         game = true;
@@ -141,14 +173,14 @@ int main()
                         rules = false;
                         game_mode = 2;
                         score = 0;
-                        for (int i = 0; i < 12; i++)
+                        for (int i = 0; i < 8; i++)
                         {
-                            for (int x = 0; x < 8; x++)
+                            for (int x = 0; x < 12; x++)
                             {
                                 pole_2[i][x] = 0;
                             }
                         }
-                        pole_2[rand() % 12 + 0][rand() % 8 + 0] = 2;
+                        pole_2[rand() % 8 + 0][rand() % 12 + 0] = 2;                        
                         break;    
                     case SDLK_b:
                         game = true;
@@ -186,7 +218,7 @@ int main()
 
         
         //Update
-        if (!game) {
+        if (!game && !game_over) {
             char text_menu[8] = "Nabidka";
             char text_help[68] = "Stisknete klavesu q pro ukonceni programu, r pro zobrazeni pravidel";
             char text_play[60] = "n - nova hra (4*4), m - nova hra (12*8), b - nova hra (3*3)";
@@ -608,7 +640,7 @@ int main()
             SDL_Surface * square_surface_4;
             if (pole_2[0][4]) {
                 char ch[5];
-                sprintf(ch, "%d", pole_2[1][0]);
+                sprintf(ch, "%d", pole_2[0][4]);
                 square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
             } else {
                 square_surface_4 = TTF_RenderText_Solid(sans, "", RGB_yellow);
@@ -621,7 +653,7 @@ int main()
             SDL_Surface * square_surface_5;
             if (pole_2[0][5]) {
                 char ch[5];
-                sprintf(ch, "%d", pole_2[1][1]);
+                sprintf(ch, "%d", pole_2[0][5]);
                 square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
             } else {
                 square_surface_5 = TTF_RenderText_Solid(sans, "", RGB_yellow);
@@ -634,7 +666,7 @@ int main()
             SDL_Surface * square_surface_6;
             if (pole_2[0][6]) {
                 char ch[5];
-                sprintf(ch, "%d", pole_2[1][2]);
+                sprintf(ch, "%d", pole_2[0][6]);
                 square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
             } else {
                 square_surface_6 = TTF_RenderText_Solid(sans, "", RGB_yellow);
@@ -699,7 +731,7 @@ int main()
             SDL_Surface * square_surface_11;
             if (pole_2[0][11]) {
                 char ch[5];
-                sprintf(ch, "%d", pole_2[2][3]);
+                sprintf(ch, "%d", pole_2[0][11]);
                 square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
             } else {
                 square_surface_11 = TTF_RenderText_Solid(sans, "", RGB_yellow);
@@ -2166,7 +2198,7 @@ int main()
             char game_help[36] = "Hra se ovlada sipkami na klavesnici";
 
             //Musíme si udělt surface - vyrobíme obrázek, který bude v paměti, z toho potom 
-            SDL_Rect score_rect = {.x = WINDOW_WIDTH / 2 - 50, .y = 50, .w = 100, .h = 20}; //V tomto obdélníku bude to score
+            SDL_Rect score_rect = {.x = WINDOW_WIDTH / 2 - 50, .y = 50, .w = 150, .h = 20}; //V tomto obdélníku bude to score
             SDL_Surface * menu_surface = TTF_RenderText_Solid(sans, text_menu, RGB_red);
             //Textura - "obrázky na zdech, postavách, které jsou natažené na geometriký model"
             //Vezeme texturu a natáhneme ji na čtverec
