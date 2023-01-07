@@ -75,7 +75,6 @@ int main()
                 quit = true;
             }
             else if (e.type == SDL_KEYDOWN) { //Pokud je stisknuto tlačítko
-                //printf("%d\n", e.key.keysym.sym);
                 score++;
 
                 switch( e.key.keysym.sym ){
@@ -85,72 +84,289 @@ int main()
                             for (int r = 0; r < 4; r++)
                             {
                                 if (pole_1[r][0] && (pole_1[r][0] == pole_1[r][1])){
+                                    if (pole_1[r][0]*2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }                                    
                                     pole_1[r][0] = pole_1[r][0]*2;
                                     pole_1[r][1] = 0;
                                 }
                                 if (pole_1[r][1] && (pole_1[r][1] == pole_1[r][2])) {
+                                    if (pole_1[r][1] * 2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }
                                     pole_1[r][1] = pole_1[r][1] * 2;
                                     pole_1[r][2] = 0;
                                 }
                                 if (pole_1[r][2] && (pole_1[r][2] == pole_1[r][3])) {
+                                    if (pole_1[r][2] * 2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }
                                     pole_1[r][2] = pole_1[r][2] * 2;
                                     pole_1[r][3] = 0;
-                                }   
-                                //Teď najít maximum a napsat to do score
-                                for (int c = 0; c < 4; c++)
+                                }                                
+
+                                for (int i = 0; i < 3; i++)
                                 {
-                                    for (int r = 0; r < 4; c++)
-                                    {
-                                        /* code */
+                                    if (pole_1[r][0] == 0){
+                                        pole_1[r][0] = pole_1[r][1];
+                                        pole_1[r][1] = pole_1[r][2];    
+                                        pole_1[r][2] = pole_1[r][3];
+                                        pole_1[r][3] = 0;
                                     }
-                                    
-                                }
-                                
-
-
-                                if (pole_1[r][0] == 0){
-                                    pole_1[r][0] = pole_1[r][1];
-                                    pole_1[r][1] = pole_1[r][2];    
-                                    pole_1[r][2] = pole_1[r][3];
-                                    pole_1[r][3] = 0;
-                                }
-                                else if (pole_1[r][1] == 0) {
-                                    pole_1[r][1] = pole_1[r][2];    
-                                    pole_1[r][2] = pole_1[r][3];
-                                    pole_1[r][3] = 0;
-                                }  
-                                else if (pole_1[r][2] == 0) {
-                                    pole_1[r][2] = pole_1[r][3]; 
-                                    pole_1[r][3] = 0;  
-                                }
-                                else if (pole_1[r][3] == 0) {
-                                    pole_1[r][3] = 0;
-                                }                              
+                                    else if (pole_1[r][1] == 0) {
+                                        pole_1[r][1] = pole_1[r][2];    
+                                        pole_1[r][2] = pole_1[r][3];
+                                        pole_1[r][3] = 0;
+                                    }  
+                                    else if (pole_1[r][2] == 0) {
+                                        pole_1[r][2] = pole_1[r][3]; 
+                                        pole_1[r][3] = 0;  
+                                    }
+                                    else if (pole_1[r][3] == 0) {
+                                        pole_1[r][3] = 0;
+                                    }
+                                }                            
                             }
                             if(pole_1[0][0] && pole_1[0][1] && pole_1[0][2] && pole_1[0][3] && pole_1[1][0] && pole_1[1][1] && pole_1[1][2] && pole_1[1][3] && pole_1[2][0] && pole_1[2][1] && pole_1[2][2] && pole_1[2][3] && pole_1[3][0] && pole_1[3][1] && pole_1[3][2] && pole_1[3][3]) {
                                 game_over = true;
                                 game = false;                            
                                 break;
                             }
-
                             int new_x = rand() % 4 + 0;
                             int new_y = rand() % 4 + 0;
                             while (pole_1[new_x][new_y] != 0) {
                                 new_x = rand() % 4 + 0;
                                 new_y = rand() % 4 + 0;
                             }
-                            pole_1[new_x][new_y] = 2;
-                            
+                            if (rand() % 2 == 1) {
+                                pole_1[new_x][new_y] = 2;
+                            } else {
+                                pole_1[new_x][new_y] = 4;
+                            }
                         }                        
                         break;
                     case SDLK_RIGHT:
-                        printf("right\n");                        
+                        printf("right\n");        
+                        if (game_mode == 1) {
+                            for (int r = 0; r < 4; r++)
+                            {
+                               if (pole_1[r][2] && (pole_1[r][2] == pole_1[r][3])) {
+                                    if (pole_1[r][3] * 2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }
+                                    pole_1[r][3] = pole_1[r][3] * 2;
+                                    pole_1[r][2] = 0;
+                                }     
+                                if (pole_1[r][1] && (pole_1[r][1] == pole_1[r][2])) {
+                                    if (pole_1[r][2] * 2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }
+                                    pole_1[r][2] = pole_1[r][2] * 2;
+                                    pole_1[r][1] = 0;
+                                }       
+                                if (pole_1[r][0] && (pole_1[r][0] == pole_1[r][1])){
+                                    if (pole_1[r][1]*2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }                                
+                                    pole_1[r][1] = pole_1[r][1]*2;
+                                    pole_1[r][0] = 0;
+                                }                    
+
+                                for (int i = 0; i < 3; i++)
+                                {
+                                    if (pole_1[r][3] == 0){
+                                        pole_1[r][3] = pole_1[r][2];
+                                        pole_1[r][2] = pole_1[r][1];    
+                                        pole_1[r][1] = pole_1[r][0];
+                                        pole_1[r][0] = 0;
+                                    }
+                                    else if (pole_1[r][2] == 0) {
+                                        pole_1[r][2] = pole_1[r][1];    
+                                        pole_1[r][1] = pole_1[r][0];
+                                        pole_1[r][0] = 0;
+                                    }  
+                                    else if (pole_1[r][1] == 0) {
+                                        pole_1[r][1] = pole_1[r][0]; 
+                                        pole_1[r][0] = 0;  
+                                    }
+                                    else if (pole_1[r][0] == 0) {
+                                        pole_1[r][0] = 0;
+                                    }
+                                }
+                            }
+                            if(pole_1[0][0] && pole_1[0][1] && pole_1[0][2] && pole_1[0][3] && pole_1[1][0] && pole_1[1][1] && pole_1[1][2] && pole_1[1][3] && pole_1[2][0] && pole_1[2][1] && pole_1[2][2] && pole_1[2][3] && pole_1[3][0] && pole_1[3][1] && pole_1[3][2] && pole_1[3][3]) {
+                                game_over = true;
+                                game = false;                            
+                                break;
+                            }
+                            int new_x = rand() % 4 + 0;
+                            int new_y = rand() % 4 + 0;
+                            while (pole_1[new_x][new_y] != 0) {
+                                new_x = rand() % 4 + 0;
+                                new_y = rand() % 4 + 0;
+                            }
+                            if (rand() % 2 == 1) {
+                                pole_1[new_x][new_y] = 2;
+                            } else {
+                                pole_1[new_x][new_y] = 4;
+                            }        
+                        }                  
+                        break;
+                    case SDLK_DOWN:                        
+                        if (game_mode == 1) {
+                            for (int r = 0; r < 4; r++)
+                            {
+                               if (pole_1[2][r] && (pole_1[2][r] == pole_1[3][r])) {
+                                    if (pole_1[3][r] * 2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }
+                                    pole_1[3][r] = pole_1[3][r] * 2;
+                                    pole_1[2][r] = 0;
+                                }     
+                                if (pole_1[1][r] && (pole_1[1][r] == pole_1[2][r])) {
+                                    if (pole_1[2][r] * 2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }
+                                    pole_1[2][r] = pole_1[2][r] * 2;
+                                    pole_1[1][r] = 0;
+                                }       
+                                if (pole_1[0][r] && (pole_1[0][r] == pole_1[1][r])){
+                                    if (pole_1[1][r]*2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }                                
+                                    pole_1[1][r] = pole_1[1][r]*2;
+                                    pole_1[0][r] = 0;
+                                }                    
+
+                                for (int i = 0; i < 3; i++)
+                                {
+                                    if (pole_1[3][r] == 0){
+                                        pole_1[3][r] = pole_1[2][r];
+                                        pole_1[2][r] = pole_1[1][r];    
+                                        pole_1[1][r] = pole_1[0][r];
+                                        pole_1[0][r] = 0;
+                                    }
+                                    else if (pole_1[2][r] == 0) {
+                                        pole_1[2][r] = pole_1[1][r];    
+                                        pole_1[1][r] = pole_1[0][r];
+                                        pole_1[0][r] = 0;
+                                    }  
+                                    else if (pole_1[1][r] == 0) {
+                                        pole_1[1][r] = pole_1[0][r]; 
+                                        pole_1[0][r] = 0;  
+                                    }
+                                    else if (pole_1[0][r] == 0) {
+                                        pole_1[0][r] = 0;
+                                    }
+                                }
+                            }
+                            if(pole_1[0][0] && pole_1[0][1] && pole_1[0][2] && pole_1[0][3] && pole_1[1][0] && pole_1[1][1] && pole_1[1][2] && pole_1[1][3] && pole_1[2][0] && pole_1[2][1] && pole_1[2][2] && pole_1[2][3] && pole_1[3][0] && pole_1[3][1] && pole_1[3][2] && pole_1[3][3]) {
+                                game_over = true;
+                                game = false;                            
+                                break;
+                            }
+                            int new_x = rand() % 4 + 0;
+                            int new_y = rand() % 4 + 0;
+                            while (pole_1[new_x][new_y] != 0) {
+                                new_x = rand() % 4 + 0;
+                                new_y = rand() % 4 + 0;
+                            }
+                            if (rand() % 2 == 1) {
+                                pole_1[new_x][new_y] = 2;
+                            } else {
+                                pole_1[new_x][new_y] = 4;
+                            }                       
+                        }                   
                         break;
                     case SDLK_UP:
-                        printf("up\n");                        
-                        break;
-                    case SDLK_DOWN:
-                        printf("down\n");
+                        if (game_mode == 1) {
+                            for (int r = 0; r < 4; r++)
+                            {
+                                if (pole_1[0][r] && (pole_1[0][r] == pole_1[1][r])){
+                                    if (pole_1[0][r]*2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }                                    
+                                    pole_1[0][r] = pole_1[0][r]*2;
+                                    pole_1[1][r] = 0;
+                                }
+                                if (pole_1[1][r] && (pole_1[1][r] == pole_1[2][r])) {
+                                    if (pole_1[1][r] * 2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }
+                                    pole_1[1][r] = pole_1[1][r] * 2;
+                                    pole_1[2][r] = 0;
+                                }
+                                if (pole_1[2][r] && (pole_1[2][r] == pole_1[3][r])) {
+                                    if (pole_1[2][r] * 2 == 2048) {
+                                        win = true;
+                                        game = false;
+                                        break;
+                                    }
+                                    pole_1[2][r] = pole_1[2][r] * 2;
+                                    pole_1[3][r] = 0;
+                                }                                
+
+                                for (int i = 0; i < 3; i++)
+                                {
+                                    if (pole_1[0][r] == 0){
+                                        pole_1[0][r] = pole_1[1][r];
+                                        pole_1[1][r] = pole_1[2][r];    
+                                        pole_1[2][r] = pole_1[3][r];
+                                        pole_1[3][r] = 0;
+                                    }
+                                    else if (pole_1[1][r] == 0) {
+                                        pole_1[1][r] = pole_1[2][r];    
+                                        pole_1[2][r] = pole_1[3][r];
+                                        pole_1[3][r] = 0;
+                                    }  
+                                    else if (pole_1[2][r] == 0) {
+                                        pole_1[2][r] = pole_1[3][r]; 
+                                        pole_1[3][r] = 0;  
+                                    }
+                                    else if (pole_1[3][r] == 0) {
+                                        pole_1[3][r] = 0;
+                                    }                              
+                                }
+                            }
+                            if(pole_1[0][0] && pole_1[0][1] && pole_1[0][2] && pole_1[0][3] && pole_1[1][0] && pole_1[1][1] && pole_1[1][2] && pole_1[1][3] && pole_1[2][0] && pole_1[2][1] && pole_1[2][2] && pole_1[2][3] && pole_1[3][0] && pole_1[3][1] && pole_1[3][2] && pole_1[3][3]) {
+                                game_over = true;
+                                game = false;                            
+                                break;
+                            }
+                            int new_x = rand() % 4 + 0;
+                            int new_y = rand() % 4 + 0;
+                            while (pole_1[new_x][new_y] != 0) {
+                                new_x = rand() % 4 + 0;
+                                new_y = rand() % 4 + 0;
+                            }
+                            if (rand() % 2 == 1) {
+                                pole_1[new_x][new_y] = 2;
+                            } else {
+                                pole_1[new_x][new_y] = 4;
+                            }
+                        }
                         break;
                     case 110:
                         game = true;
@@ -165,8 +381,11 @@ int main()
                                 pole_1[i][x] = 0;
                             }
                         }
-                        pole_1[rand() % 4 + 0][rand() % 4 + 0] = 2;
-                        printf("Nova hra\n");
+                        if (rand() % 2 == 1) {
+                            pole_1[rand() % 4 + 0][rand() % 4 + 0] = 2;
+                        } else {
+                            pole_1[rand() % 4 + 0][rand() % 4 + 0] = 4;
+                        }
                         break;
                     case SDLK_m:
                         game = true;
@@ -180,7 +399,11 @@ int main()
                                 pole_2[i][x] = 0;
                             }
                         }
-                        pole_2[rand() % 8 + 0][rand() % 12 + 0] = 2;                        
+                        if (rand() % 2 == 1) {
+                            pole_2[rand() % 8 + 0][rand() % 12 + 0] = 2;                        
+                        } else {
+                            pole_2[rand() % 8 + 0][rand() % 12 + 0] = 4;                        
+                        }
                         break;    
                     case SDLK_b:
                         game = true;
@@ -194,19 +417,22 @@ int main()
                                 pole_3[i][x] = 0;
                             }
                         }
-                        pole_3[rand() % 3 + 0][rand() % 3 + 0] = 2;
+                        if (rand() % 2 == 1) {
+                            pole_3[rand() % 3 + 0][rand() % 3 + 0] = 2;
+                        } else {
+                            pole_3[rand() % 3 + 0][rand() % 3 + 0] = 4;
+                        }
                         break;
-                    case 113:
-                        printf("Konec\n");
+                    case 113:                        
                         quit = true;
                         break;
-                    case 114:
-                        printf("Pravidla\n");
+                    case 114:                        
                         if (rules) {
                             rules = false;
                         } else {
                             rules = true;
                         }
+                        score--;
                         break;
                     default:
                         break;
@@ -223,6 +449,7 @@ int main()
             char text_help[68] = "Stisknete klavesu q pro ukonceni programu, r pro zobrazeni pravidel";
             char text_play[60] = "n - nova hra (4*4), m - nova hra (12*8), b - nova hra (3*3)";
             char game_help[36] = "Hra se ovlada sipkami na klavesnici";
+            char score_info[23] = "Score udava pocet tahu";
 
             //Musíme si udělt surface - vyrobíme obrázek, který bude v paměti, z toho potom 
             SDL_Rect score_rect = {.x = WINDOW_WIDTH / 2 - 50, .y = 50, .w = 100, .h = 20}; //V tomto obdélníku bude to score
@@ -249,6 +476,11 @@ int main()
             SDL_Texture * game_help_texture = SDL_CreateTextureFromSurface(renderer, game_help_surface);
             SDL_RenderCopy(renderer, game_help_texture, NULL, &game_help_rect);
 
+            SDL_Rect score_info_rect = {.x = WINDOW_WIDTH / 2 - 170, .y = 450, .w = 380, .h = 20};
+            SDL_Surface * score_info_surface = TTF_RenderText_Solid(sans, score_info, RGB_white);
+            SDL_Texture * score_info_texture = SDL_CreateTextureFromSurface(renderer, score_info_surface);
+            SDL_RenderCopy(renderer, score_info_texture, NULL, &score_info_rect);
+
             SDL_RenderPresent(renderer);  // Prezentace objektu
 
 
@@ -262,11 +494,14 @@ int main()
             SDL_FreeSurface(game_help_surface);
             SDL_DestroyTexture(play_texture);
             SDL_FreeSurface(play_surface);
+            SDL_DestroyTexture(score_info_texture);
+            SDL_FreeSurface(score_info_surface);
         } else if (rules) {
             char text_menu[9] = "Pravidla";
             char text_help[65] = "Stisknete klavesu q pro ukonceni programu, r pro skryti pravidel";
             char text_play[60] = "n - nova hra (4*4), m - nova hra (12*8), b - nova hra (3*3)";
             char game_help[36] = "Hra se ovlada sipkami na klavesnici";
+            char score_info[23] = "Score udava pocet tahu";
 
             //Musíme si udělt surface - vyrobíme obrázek, který bude v paměti, z toho potom 
             SDL_Rect score_rect = {.x = WINDOW_WIDTH / 2 - 50, .y = 50, .w = 100, .h = 20}; //V tomto obdélníku bude to score
@@ -292,6 +527,11 @@ int main()
             SDL_Texture * game_help_texture = SDL_CreateTextureFromSurface(renderer, game_help_surface);
             SDL_RenderCopy(renderer, game_help_texture, NULL, &game_help_rect);
 
+            SDL_Rect score_info_rect = {.x = WINDOW_WIDTH / 2 - 170, .y = 450, .w = 380, .h = 20};
+            SDL_Surface * score_info_surface = TTF_RenderText_Solid(sans, score_info, RGB_white);
+            SDL_Texture * score_info_texture = SDL_CreateTextureFromSurface(renderer, score_info_surface);
+            SDL_RenderCopy(renderer, score_info_texture, NULL, &score_info_rect);
+
             SDL_RenderPresent(renderer);  // Prezentace objektu
 
 
@@ -305,6 +545,8 @@ int main()
             SDL_FreeSurface(game_help_surface);
             SDL_DestroyTexture(play_texture);
             SDL_FreeSurface(play_surface);
+            SDL_DestroyTexture(score_info_texture);
+            SDL_FreeSurface(score_info_surface);
         } else if (game && !rules && (game_mode == 1)){ //Hra 4*4
             //Nápis se score
             SDL_Rect score_rect = {.x = WINDOW_WIDTH / 2 - 50, .y = 30, .w = 100, .h = 20}; //V tomto obdélníku bude to score
@@ -2289,6 +2531,3 @@ int main()
     return 0;
 }
 // gcc main.c -o main  -lSDL2 -lSDL2_ttf
-// n - new game 110
-// q - quit 113
-// r - rules    114
