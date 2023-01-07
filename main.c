@@ -53,6 +53,8 @@ int main()
 
     SDL_Color RGB_yellow = {241, 174, 27};
     SDL_Color RGB_red = {255, 0, 0};
+    SDL_Color RGB_orange_8 = {240, 174, 119};
+    SDL_Color RGB_orange_32 = {245, 122, 93};
     SDL_Color RGB_green = {0, 255, 0};
 
     srand(time(0)); //Inicializace random čísel podle času v systému
@@ -1554,7 +1556,15 @@ int main()
             if (pole_1[0][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[0][0]);
-                square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[0][0] < 8) {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[0][0] == 8 || pole_1[0][0] == 16) {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[0][0] == 32 || pole_1[0][0] == 64) {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_0 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1567,7 +1577,15 @@ int main()
             if (pole_1[0][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[0][1]);
-                square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[0][1] < 8) {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[0][1] == 8 || pole_1[0][1] == 16) {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[0][1] == 32 || pole_1[0][1] == 64) {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_1 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1580,7 +1598,15 @@ int main()
             if (pole_1[0][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[0][2]);
-                square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[0][2] < 8) {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[0][2] == 8 || pole_1[0][2] == 16) {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[0][2] == 32 || pole_1[0][2] == 64) {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_2 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1593,7 +1619,15 @@ int main()
             if (pole_1[0][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[0][3]);
-                square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[0][3] < 8) {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[0][3] == 8 || pole_1[0][3] == 16) {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[0][3] == 32 || pole_1[0][3] == 64) {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_3 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1606,7 +1640,15 @@ int main()
             if (pole_1[1][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[1][0]);
-                square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[1][0] < 8) {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[1][0] == 8 || pole_1[1][0] == 16) {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[1][0] == 32 || pole_1[1][0] == 64) {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_4 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1619,7 +1661,15 @@ int main()
             if (pole_1[1][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[1][1]);
-                square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[1][1] < 8) {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[1][1] == 8 || pole_1[1][1] == 16) {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[1][1] == 32 || pole_1[1][1] == 64) {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_5 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1632,7 +1682,15 @@ int main()
             if (pole_1[1][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[1][2]);
-                square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[1][2] < 8) {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[1][2] == 8 || pole_1[1][2] == 16) {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[1][2] == 32 || pole_1[1][2] == 64) {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_6 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1645,7 +1703,15 @@ int main()
             if (pole_1[1][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[1][3]);
-                square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[1][3] < 8) {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[1][3] == 8 || pole_1[1][3] == 16) {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[1][3] == 32 || pole_1[1][3] == 64) {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_7 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1658,7 +1724,15 @@ int main()
             if (pole_1[2][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[2][0]);
-                square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[2][0] < 8) {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[2][0] == 8 || pole_1[2][0] == 16) {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[2][0] == 32 || pole_1[2][0] == 64) {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_8 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1671,7 +1745,15 @@ int main()
             if (pole_1[2][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[2][1]);
-                square_surface_9 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[2][1] < 8) {
+                    square_surface_9 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[2][1] == 8 || pole_1[2][1] == 16) {
+                    square_surface_9 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[2][1] == 32 || pole_1[2][1] == 64) {
+                    square_surface_9 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_9 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_9 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1684,7 +1766,15 @@ int main()
             if (pole_1[2][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[2][2]);
-                square_surface_10 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[2][2] < 8) {
+                    square_surface_10 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[2][2] == 8 || pole_1[2][2] == 16) {
+                    square_surface_10 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[2][2] == 32 || pole_1[2][2] == 64) {
+                    square_surface_10 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_10 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_10 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1697,7 +1787,15 @@ int main()
             if (pole_1[2][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[2][3]);
-                square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[2][3] < 8) {
+                    square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[2][3] == 8 || pole_1[2][3] == 16) {
+                    square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[2][3] == 32 || pole_1[2][3] == 64) {
+                    square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_11 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1710,7 +1808,15 @@ int main()
             if (pole_1[3][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[3][0]);
-                square_surface_12 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[3][0] < 8) {
+                    square_surface_12 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[3][0] == 8 || pole_1[3][0] == 16) {
+                    square_surface_12 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[3][0] == 32 || pole_1[3][0] == 64) {
+                    square_surface_12 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_12 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_12 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1723,7 +1829,15 @@ int main()
             if (pole_1[3][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[3][1]);
-                square_surface_13 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[3][1] < 8) {
+                    square_surface_13 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[3][1] == 8 || pole_1[3][1] == 16) {
+                    square_surface_13 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[3][1] == 32 || pole_1[3][1] == 64) {
+                    square_surface_13 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_13 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_13 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1736,7 +1850,15 @@ int main()
             if (pole_1[3][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[3][2]);
-                square_surface_14 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[3][2] < 8) {
+                    square_surface_14 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[3][2] == 8 || pole_1[3][2] == 16) {
+                    square_surface_14 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[3][2] == 32 || pole_1[3][2] == 64) {
+                    square_surface_14 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_14 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_14 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1749,7 +1871,15 @@ int main()
             if (pole_1[3][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_1[3][3]);
-                square_surface_15 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_1[3][3] < 8) {
+                    square_surface_15 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_1[3][3] == 8 || pole_1[3][3] == 16) {
+                    square_surface_15 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_1[3][3] == 32 || pole_1[3][3] == 64) {
+                    square_surface_15 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_15 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_15 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1819,7 +1949,15 @@ int main()
             if (pole_2[0][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][0]);
-                square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][0] < 8) {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][0] == 8 || pole_2[0][0] == 16) {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][0] == 32 || pole_2[0][0] == 64) {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_0 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1832,7 +1970,15 @@ int main()
             if (pole_2[0][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][1]);
-                square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][1] < 8) {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][1] == 8 || pole_2[0][1] == 16) {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][1] == 32 || pole_2[0][1] == 64) {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_1 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1845,7 +1991,15 @@ int main()
             if (pole_2[0][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][2]);
-                square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][2] < 8) {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][2] == 8 || pole_2[0][2] == 16) {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][2] == 32 || pole_2[0][2] == 64) {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_2 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1858,7 +2012,15 @@ int main()
             if (pole_2[0][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][3]);
-                square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][3] < 8) {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][3] == 8 || pole_2[0][3] == 16) {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][3] == 32 || pole_2[0][3] == 64) {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_3 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1871,7 +2033,15 @@ int main()
             if (pole_2[0][4]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][4]);
-                square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][4] < 8) {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][4] == 8 || pole_2[0][4] == 16) {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][4] == 32 || pole_2[0][4] == 64) {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_4 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1884,7 +2054,15 @@ int main()
             if (pole_2[0][5]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][5]);
-                square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][5] < 8) {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][5] == 8 || pole_2[0][5] == 16) {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][5] == 32 || pole_2[0][5] == 64) {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_5 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1897,7 +2075,15 @@ int main()
             if (pole_2[0][6]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][6]);
-                square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][6] < 8) {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][6] == 8 || pole_2[0][6] == 16) {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][6] == 32 || pole_2[0][6] == 64) {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_6 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1910,7 +2096,15 @@ int main()
             if (pole_2[0][7]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][7]);
-                square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][7] < 8) {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][7] == 8 || pole_2[0][7] == 16) {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][7] == 32 || pole_2[0][7] == 64) {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_7 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1923,7 +2117,15 @@ int main()
             if (pole_2[0][8]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][8]);
-                square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][8] < 8) {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][8] == 8 || pole_2[0][8] == 16) {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][8] == 32 || pole_2[0][8] == 64) {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_8 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1936,7 +2138,15 @@ int main()
             if (pole_2[0][9]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][9]);
-                square_surface_9 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][9] < 8) {
+                    square_surface_9 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][9] == 8 || pole_2[0][9] == 16) {
+                    square_surface_9 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][9] == 32 || pole_2[0][9] == 64) {
+                    square_surface_9 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_9 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_9 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1949,7 +2159,15 @@ int main()
             if (pole_2[0][10]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][10]);
-                square_surface_10 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][10] < 8) {
+                    square_surface_10 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][10] == 8 || pole_2[0][10] == 16) {
+                    square_surface_10 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][10] == 32 || pole_2[0][10] == 64) {
+                    square_surface_10 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_10 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_10 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1962,7 +2180,15 @@ int main()
             if (pole_2[0][11]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[0][11]);
-                square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[0][11] < 8) {
+                    square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[0][11] == 8 || pole_2[0][11] == 16) {
+                    square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[0][11] == 32 || pole_2[0][11] == 64) {
+                    square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_11 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_11 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1975,7 +2201,15 @@ int main()
             if (pole_2[1][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][0]);
-                square_surface_12 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][0] < 8) {
+                    square_surface_12 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][0] == 8 || pole_2[1][0] == 16) {
+                    square_surface_12 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][0] == 32 || pole_2[1][0] == 64) {
+                    square_surface_12 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_12 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_12 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -1988,7 +2222,15 @@ int main()
             if (pole_2[1][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][1]);
-                square_surface_13 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][1] < 8) {
+                    square_surface_13 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][1] == 8 || pole_2[1][1] == 16) {
+                    square_surface_13 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][1] == 32 || pole_2[1][1] == 64) {
+                    square_surface_13 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_13 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_13 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2001,7 +2243,15 @@ int main()
             if (pole_2[1][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][2]);
-                square_surface_14 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][2] < 8) {
+                    square_surface_14 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][2] == 8 || pole_2[1][2] == 16) {
+                    square_surface_14 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][2] == 32 || pole_2[1][2] == 64) {
+                    square_surface_14 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_14 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_14 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2014,7 +2264,15 @@ int main()
             if (pole_2[1][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][3]);
-                square_surface_15 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][3] < 8) {
+                    square_surface_15 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][3] == 8 || pole_2[1][3] == 16) {
+                    square_surface_15 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][3] == 32 || pole_2[1][3] == 64) {
+                    square_surface_15 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_15 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_15 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2027,7 +2285,15 @@ int main()
             if (pole_2[1][4]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][4]);
-                square_surface_16 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][4] < 8) {
+                    square_surface_16 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][4] == 8 || pole_2[1][4] == 16) {
+                    square_surface_16 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][4] == 32 || pole_2[1][4] == 64) {
+                    square_surface_16 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_16 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_16 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2040,7 +2306,15 @@ int main()
             if (pole_2[1][5]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][5]);
-                square_surface_17 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][5] < 8) {
+                    square_surface_17 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][5] == 8 || pole_2[1][5] == 16) {
+                    square_surface_17 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][5] == 32 || pole_2[1][5] == 64) {
+                    square_surface_17 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_17 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_17 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2053,7 +2327,15 @@ int main()
             if (pole_2[1][6]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][6]);
-                square_surface_18 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][6] < 8) {
+                    square_surface_18 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][6] == 8 || pole_2[1][6] == 16) {
+                    square_surface_18 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][6] == 32 || pole_2[1][6] == 64) {
+                    square_surface_18 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_18 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_18 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2066,7 +2348,15 @@ int main()
             if (pole_2[1][7]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][7]);
-                square_surface_19 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][7] < 8) {
+                    square_surface_19 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][7] == 8 || pole_2[1][7] == 16) {
+                    square_surface_19 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][7] == 32 || pole_2[1][7] == 64) {
+                    square_surface_19 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_19 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_19 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2079,7 +2369,15 @@ int main()
             if (pole_2[1][8]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][8]);
-                square_surface_20 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][8] < 8) {
+                    square_surface_20 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][8] == 8 || pole_2[1][8] == 16) {
+                    square_surface_20 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][8] == 32 || pole_2[1][8] == 64) {
+                    square_surface_20 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_20 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_20 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2092,7 +2390,15 @@ int main()
             if (pole_2[1][9]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][9]);
-                square_surface_21 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][9] < 8) {
+                    square_surface_21 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][9] == 8 || pole_2[1][9] == 16) {
+                    square_surface_21 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][9] == 32 || pole_2[1][9] == 64) {
+                    square_surface_21 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_21 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_21 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2105,7 +2411,15 @@ int main()
             if (pole_2[1][10]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][10]);
-                square_surface_22 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][10] < 8) {
+                    square_surface_22 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][10] == 8 || pole_2[1][10] == 16) {
+                    square_surface_22 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][10] == 32 || pole_2[1][10] == 64) {
+                    square_surface_22 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_22 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_22 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2118,7 +2432,15 @@ int main()
             if (pole_2[1][11]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[1][11]);
-                square_surface_23 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[1][11] < 8) {
+                    square_surface_23 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[1][11] == 8 || pole_2[1][11] == 16) {
+                    square_surface_23 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[1][11] == 32 || pole_2[1][11] == 64) {
+                    square_surface_23 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_23 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_23 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2131,7 +2453,15 @@ int main()
             if (pole_2[2][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][0]);
-                square_surface_24 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][0] < 8) {
+                    square_surface_24 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][0] == 8 || pole_2[2][0] == 16) {
+                    square_surface_24 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][0] == 32 || pole_2[2][0] == 64) {
+                    square_surface_24 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_24 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_24 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2144,7 +2474,15 @@ int main()
             if (pole_2[2][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][1]);
-                square_surface_25 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][1] < 8) {
+                    square_surface_25 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][1] == 8 || pole_2[2][1] == 16) {
+                    square_surface_25 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][1] == 32 || pole_2[2][1] == 64) {
+                    square_surface_25 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_25 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_25 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2157,7 +2495,15 @@ int main()
             if (pole_2[2][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][2]);
-                square_surface_26 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][2] < 8) {
+                    square_surface_26 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][2] == 8 || pole_2[2][2] == 16) {
+                    square_surface_26 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][2] == 32 || pole_2[2][2] == 64) {
+                    square_surface_26 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_26 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_26 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2170,7 +2516,15 @@ int main()
             if (pole_2[2][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][3]);
-                square_surface_27 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][3] < 8) {
+                    square_surface_27 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][3] == 8 || pole_2[2][3] == 16) {
+                    square_surface_27 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][3] == 32 || pole_2[2][3] == 64) {
+                    square_surface_27 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_27 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_27 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2183,7 +2537,15 @@ int main()
             if (pole_2[2][4]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][4]);
-                square_surface_28 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][4] < 8) {
+                    square_surface_28 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][4] == 8 || pole_2[2][4] == 16) {
+                    square_surface_28 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][4] == 32 || pole_2[2][4] == 64) {
+                    square_surface_28 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_28 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_28 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2196,7 +2558,15 @@ int main()
             if (pole_2[2][5]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][5]);
-                square_surface_29 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][5] < 8) {
+                    square_surface_29 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][5] == 8 || pole_2[2][5] == 16) {
+                    square_surface_29 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][5] == 32 || pole_2[2][5] == 64) {
+                    square_surface_29 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_29 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_29 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2209,7 +2579,15 @@ int main()
             if (pole_2[2][6]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][6]);
-                square_surface_30 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][6] < 8) {
+                    square_surface_30 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][6] == 8 || pole_2[2][6] == 16) {
+                    square_surface_30 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][6] == 32 || pole_2[2][6] == 64) {
+                    square_surface_30 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_30 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_30 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2222,7 +2600,15 @@ int main()
             if (pole_2[2][7]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][7]);
-                square_surface_31 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][7] < 8) {
+                    square_surface_31 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][7] == 8 || pole_2[2][7] == 16) {
+                    square_surface_31 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][7] == 32 || pole_2[2][7] == 64) {
+                    square_surface_31 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_31 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_31 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2235,7 +2621,15 @@ int main()
             if (pole_2[2][8]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][8]);
-                square_surface_32 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][8] < 8) {
+                    square_surface_32 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][8] == 8 || pole_2[2][8] == 16) {
+                    square_surface_32 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][8] == 32 || pole_2[2][8] == 64) {
+                    square_surface_32 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_32 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_32 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2248,7 +2642,15 @@ int main()
             if (pole_2[2][9]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][9]);
-                square_surface_33 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][9] < 8) {
+                    square_surface_33 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][9] == 8 || pole_2[2][9] == 16) {
+                    square_surface_33 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][9] == 32 || pole_2[2][9] == 64) {
+                    square_surface_33 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_33 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_33 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2261,7 +2663,15 @@ int main()
             if (pole_2[2][10]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][10]);
-                square_surface_34 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][10] < 8) {
+                    square_surface_34 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][10] == 8 || pole_2[2][10] == 16) {
+                    square_surface_34 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][10] == 32 || pole_2[2][10] == 64) {
+                    square_surface_34 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_34 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_34 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2274,7 +2684,15 @@ int main()
             if (pole_2[2][11]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[2][11]);
-                square_surface_35 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[2][11] < 8) {
+                    square_surface_35 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[2][11] == 8 || pole_2[2][11] == 16) {
+                    square_surface_35 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[2][11] == 32 || pole_2[2][11] == 64) {
+                    square_surface_35 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_35 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_35 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2287,7 +2705,15 @@ int main()
             if (pole_2[3][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][0]);
-                square_surface_36 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][0] < 8) {
+                    square_surface_36 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][0] == 8 || pole_2[3][0] == 16) {
+                    square_surface_36 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][0] == 32 || pole_2[3][0] == 64) {
+                    square_surface_36 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_36 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_36 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2300,7 +2726,15 @@ int main()
             if (pole_2[3][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][1]);
-                square_surface_37 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][1] < 8) {
+                    square_surface_37 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][1] == 8 || pole_2[3][1] == 16) {
+                    square_surface_37 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][1] == 32 || pole_2[3][1] == 64) {
+                    square_surface_37 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_37 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_37 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2313,7 +2747,15 @@ int main()
             if (pole_2[3][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][2]);
-                square_surface_38 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][2] < 8) {
+                    square_surface_38 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][2] == 8 || pole_2[3][2] == 16) {
+                    square_surface_38 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][2] == 32 || pole_2[3][2] == 64) {
+                    square_surface_38 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_38 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_38 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2326,7 +2768,15 @@ int main()
             if (pole_2[3][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][3]);
-                square_surface_39 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][3] < 8) {
+                    square_surface_39 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][3] == 8 || pole_2[3][3] == 16) {
+                    square_surface_39 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][3] == 32 || pole_2[3][3] == 64) {
+                    square_surface_39 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_39 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_39 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2339,7 +2789,15 @@ int main()
             if (pole_2[3][4]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][4]);
-                square_surface_40 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][4] < 8) {
+                    square_surface_40 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][4] == 8 || pole_2[3][4] == 16) {
+                    square_surface_40 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][4] == 32 || pole_2[3][4] == 64) {
+                    square_surface_40 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_40 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_40 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2352,7 +2810,15 @@ int main()
             if (pole_2[3][5]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][5]);
-                square_surface_41 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][5] < 8) {
+                    square_surface_41 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][5] == 8 || pole_2[3][5] == 16) {
+                    square_surface_41 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][5] == 32 || pole_2[3][5] == 64) {
+                    square_surface_41 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_41 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_41 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2365,7 +2831,15 @@ int main()
             if (pole_2[3][6]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][6]);
-                square_surface_42 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][6] < 8) {
+                    square_surface_42 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][6] == 8 || pole_2[3][6] == 16) {
+                    square_surface_42 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][6] == 32 || pole_2[3][6] == 64) {
+                    square_surface_42 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_42 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_42 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2378,7 +2852,15 @@ int main()
             if (pole_2[3][7]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][7]);
-                square_surface_43 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][7] < 8) {
+                    square_surface_43 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][7] == 8 || pole_2[3][7] == 16) {
+                    square_surface_43 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][7] == 32 || pole_2[3][7] == 64) {
+                    square_surface_43 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_43 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_43 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2391,7 +2873,15 @@ int main()
             if (pole_2[3][8]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][8]);
-                square_surface_44 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][8] < 8) {
+                    square_surface_44 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][8] == 8 || pole_2[3][8] == 16) {
+                    square_surface_44 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][8] == 32 || pole_2[3][8] == 64) {
+                    square_surface_44 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_44 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_44 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2404,7 +2894,15 @@ int main()
             if (pole_2[3][9]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][9]);
-                square_surface_45 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][9] < 8) {
+                    square_surface_45 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][9] == 8 || pole_2[3][9] == 16) {
+                    square_surface_45 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][9] == 32 || pole_2[3][9] == 64) {
+                    square_surface_45 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_45 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_45 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2417,7 +2915,15 @@ int main()
             if (pole_2[3][10]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][10]);
-                square_surface_46 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][10] < 8) {
+                    square_surface_46 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][10] == 8 || pole_2[3][10] == 16) {
+                    square_surface_46 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][10] == 32 || pole_2[3][10] == 64) {
+                    square_surface_46 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_46 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_46 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2430,7 +2936,15 @@ int main()
             if (pole_2[3][11]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[3][11]);
-                square_surface_47 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[3][11] < 8) {
+                    square_surface_47 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[3][11] == 8 || pole_2[3][11] == 16) {
+                    square_surface_47 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[3][11] == 32 || pole_2[3][11] == 64) {
+                    square_surface_47 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_47 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_47 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2443,7 +2957,15 @@ int main()
             if (pole_2[4][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][0]);
-                square_surface_48 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][0] < 8) {
+                    square_surface_48 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][0] == 8 || pole_2[4][0] == 16) {
+                    square_surface_48 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][0] == 32 || pole_2[4][0] == 64) {
+                    square_surface_48 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_48 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_48 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2456,7 +2978,15 @@ int main()
             if (pole_2[4][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][1]);
-                square_surface_49 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][1] < 8) {
+                    square_surface_49 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][1] == 8 || pole_2[4][1] == 16) {
+                    square_surface_49 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][1] == 32 || pole_2[4][1] == 64) {
+                    square_surface_49 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_49 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_49 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2469,7 +2999,15 @@ int main()
             if (pole_2[4][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][2]);
-                square_surface_50 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][2] < 8) {
+                    square_surface_50 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][2] == 8 || pole_2[4][2] == 16) {
+                    square_surface_50 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][2] == 32 || pole_2[4][2] == 64) {
+                    square_surface_50 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_50 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_50 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2482,7 +3020,15 @@ int main()
             if (pole_2[4][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][3]);
-                square_surface_51 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][3] < 8) {
+                    square_surface_51 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][3] == 8 || pole_2[4][3] == 16) {
+                    square_surface_51 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][3] == 32 || pole_2[4][3] == 64) {
+                    square_surface_51 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_51 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_51 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2495,7 +3041,15 @@ int main()
             if (pole_2[4][4]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][4]);
-                square_surface_52 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][4] < 8) {
+                    square_surface_52 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][4] == 8 || pole_2[4][4] == 16) {
+                    square_surface_52 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][4] == 32 || pole_2[4][4] == 64) {
+                    square_surface_52 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_52 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_52 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2508,7 +3062,15 @@ int main()
             if (pole_2[4][5]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][5]);
-                square_surface_53 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][5] < 8) {
+                    square_surface_53 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][5] == 8 || pole_2[4][5] == 16) {
+                    square_surface_53 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][5] == 32 || pole_2[4][5] == 64) {
+                    square_surface_53 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_53 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_53 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2521,7 +3083,15 @@ int main()
             if (pole_2[4][6]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][6]);
-                square_surface_54 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][6] < 8) {
+                    square_surface_54 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][6] == 8 || pole_2[4][6] == 16) {
+                    square_surface_54 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][6] == 32 || pole_2[4][6] == 64) {
+                    square_surface_54 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_54 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_54 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2534,7 +3104,15 @@ int main()
             if (pole_2[4][7]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][7]);
-                square_surface_55 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][7] < 8) {
+                    square_surface_55 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][7] == 8 || pole_2[4][7] == 16) {
+                    square_surface_55 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][7] == 32 || pole_2[4][7] == 64) {
+                    square_surface_55 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_55 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_55 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2547,7 +3125,15 @@ int main()
             if (pole_2[4][8]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][8]);
-                square_surface_56 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][8] < 8) {
+                    square_surface_56 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][8] == 8 || pole_2[4][8] == 16) {
+                    square_surface_56 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][8] == 32 || pole_2[4][8] == 64) {
+                    square_surface_56 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_56 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_56 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2560,7 +3146,15 @@ int main()
             if (pole_2[4][9]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][9]);
-                square_surface_57 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][9] < 8) {
+                    square_surface_57 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][9] == 8 || pole_2[4][9] == 16) {
+                    square_surface_57 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][9] == 32 || pole_2[4][9] == 64) {
+                    square_surface_57 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_57 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_57 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2573,7 +3167,15 @@ int main()
             if (pole_2[4][10]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][10]);
-                square_surface_58 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][10] < 8) {
+                    square_surface_58 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][10] == 8 || pole_2[4][10] == 16) {
+                    square_surface_58 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][10] == 32 || pole_2[4][10] == 64) {
+                    square_surface_58 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_58 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_58 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2586,7 +3188,15 @@ int main()
             if (pole_2[4][11]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[4][11]);
-                square_surface_59 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[4][11] < 8) {
+                    square_surface_59 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[4][11] == 8 || pole_2[4][11] == 16) {
+                    square_surface_59 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[4][11] == 32 || pole_2[4][11] == 64) {
+                    square_surface_59 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_59 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_59 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2599,7 +3209,15 @@ int main()
             if (pole_2[5][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][0]);
-                square_surface_60 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][0] < 8) {
+                    square_surface_60 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][0] == 8 || pole_2[5][0] == 16) {
+                    square_surface_60 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][0] == 32 || pole_2[5][0] == 64) {
+                    square_surface_60 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_60 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_60 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2612,7 +3230,15 @@ int main()
             if (pole_2[5][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][1]);
-                square_surface_61 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][1] < 8) {
+                    square_surface_61 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][1] == 8 || pole_2[5][1] == 16) {
+                    square_surface_61 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][1] == 32 || pole_2[5][1] == 64) {
+                    square_surface_61 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_61 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_61 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2625,7 +3251,15 @@ int main()
             if (pole_2[5][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][2]);
-                square_surface_62 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][2] < 8) {
+                    square_surface_62 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][2] == 8 || pole_2[5][2] == 16) {
+                    square_surface_62 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][2] == 32 || pole_2[5][2] == 64) {
+                    square_surface_62 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_62 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_62 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2638,7 +3272,15 @@ int main()
             if (pole_2[5][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][3]);
-                square_surface_63 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][3] < 8) {
+                    square_surface_63 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][3] == 8 || pole_2[5][3] == 16) {
+                    square_surface_63 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][3] == 32 || pole_2[5][3] == 64) {
+                    square_surface_63 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_63 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_63 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2651,7 +3293,15 @@ int main()
             if (pole_2[5][4]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][4]);
-                square_surface_64 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][4] < 8) {
+                    square_surface_64 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][4] == 8 || pole_2[5][4] == 16) {
+                    square_surface_64 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][4] == 32 || pole_2[5][4] == 64) {
+                    square_surface_64 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_64 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_64 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2664,7 +3314,15 @@ int main()
             if (pole_2[5][5]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][5]);
-                square_surface_65 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][5] < 8) {
+                    square_surface_65 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][5] == 8 || pole_2[5][5] == 16) {
+                    square_surface_65 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][5] == 32 || pole_2[5][5] == 64) {
+                    square_surface_65 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_65 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_65 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2677,7 +3335,15 @@ int main()
             if (pole_2[5][6]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][6]);
-                square_surface_66 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][6] < 8) {
+                    square_surface_66 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][6] == 8 || pole_2[5][6] == 16) {
+                    square_surface_66 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][6] == 32 || pole_2[5][6] == 64) {
+                    square_surface_66 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_66 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_66 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2690,7 +3356,15 @@ int main()
             if (pole_2[5][7]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][7]);
-                square_surface_67 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][7] < 8) {
+                    square_surface_67 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][7] == 8 || pole_2[5][7] == 16) {
+                    square_surface_67 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][7] == 32 || pole_2[5][7] == 64) {
+                    square_surface_67 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_67 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_67 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2703,7 +3377,15 @@ int main()
             if (pole_2[5][8]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][8]);
-                square_surface_68 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][8] < 8) {
+                    square_surface_68 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][8] == 8 || pole_2[5][8] == 16) {
+                    square_surface_68 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][8] == 32 || pole_2[5][8] == 64) {
+                    square_surface_68 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_68 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_68 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2716,7 +3398,15 @@ int main()
             if (pole_2[5][9]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][9]);
-                square_surface_69 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][9] < 8) {
+                    square_surface_69 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][9] == 8 || pole_2[5][9] == 16) {
+                    square_surface_69 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][9] == 32 || pole_2[5][9] == 64) {
+                    square_surface_69 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_69 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_69 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2729,7 +3419,15 @@ int main()
             if (pole_2[5][10]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][10]);
-                square_surface_70 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][10] < 8) {
+                    square_surface_70 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][10] == 8 || pole_2[5][10] == 16) {
+                    square_surface_70 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][10] == 32 || pole_2[5][10] == 64) {
+                    square_surface_70 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_70 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_70 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2742,7 +3440,15 @@ int main()
             if (pole_2[5][11]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[5][11]);
-                square_surface_71 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[5][11] < 8) {
+                    square_surface_71 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[5][11] == 8 || pole_2[5][11] == 16) {
+                    square_surface_71 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[5][11] == 32 || pole_2[5][11] == 64) {
+                    square_surface_71 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_71 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_71 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2755,7 +3461,15 @@ int main()
             if (pole_2[6][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][0]);
-                square_surface_72 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][0] < 8) {
+                    square_surface_72 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][0] == 8 || pole_2[6][0] == 16) {
+                    square_surface_72 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][0] == 32 || pole_2[6][0] == 64) {
+                    square_surface_72 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_72 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_72 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2768,7 +3482,15 @@ int main()
             if (pole_2[6][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][1]);
-                square_surface_73 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][1] < 8) {
+                    square_surface_73 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][1] == 8 || pole_2[6][1] == 16) {
+                    square_surface_73 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][1] == 32 || pole_2[6][1] == 64) {
+                    square_surface_73 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_73 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_73 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2781,7 +3503,15 @@ int main()
             if (pole_2[6][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][2]);
-                square_surface_74 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][2] < 8) {
+                    square_surface_74 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][2] == 8 || pole_2[6][2] == 16) {
+                    square_surface_74 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][2] == 32 || pole_2[6][2] == 64) {
+                    square_surface_74 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_74 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_74 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2794,7 +3524,15 @@ int main()
             if (pole_2[6][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][3]);
-                square_surface_75 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][3] < 8) {
+                    square_surface_75 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][3] == 8 || pole_2[6][3] == 16) {
+                    square_surface_75 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][3] == 32 || pole_2[6][3] == 64) {
+                    square_surface_75 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_75 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_75 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2807,7 +3545,15 @@ int main()
             if (pole_2[6][4]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][4]);
-                square_surface_76 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][4] < 8) {
+                    square_surface_76 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][4] == 8 || pole_2[6][4] == 16) {
+                    square_surface_76 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][4] == 32 || pole_2[6][4] == 64) {
+                    square_surface_76 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_76 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_76 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2820,7 +3566,15 @@ int main()
             if (pole_2[6][5]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][5]);
-                square_surface_77 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][5] < 8) {
+                    square_surface_77 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][5] == 8 || pole_2[6][5] == 16) {
+                    square_surface_77 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][5] == 32 || pole_2[6][5] == 64) {
+                    square_surface_77 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_77 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_77 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2833,7 +3587,15 @@ int main()
             if (pole_2[6][6]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][6]);
-                square_surface_78 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][6] < 8) {
+                    square_surface_78 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][6] == 8 || pole_2[6][6] == 16) {
+                    square_surface_78 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][6] == 32 || pole_2[6][6] == 64) {
+                    square_surface_78 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_78 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_78 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2846,7 +3608,15 @@ int main()
             if (pole_2[6][7]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][7]);
-                square_surface_79 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][7] < 8) {
+                    square_surface_79 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][7] == 8 || pole_2[6][7] == 16) {
+                    square_surface_79 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][7] == 32 || pole_2[6][7] == 64) {
+                    square_surface_79 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_79 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_79 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2859,7 +3629,15 @@ int main()
             if (pole_2[6][8]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][8]);
-                square_surface_80 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][8] < 8) {
+                    square_surface_80 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][8] == 8 || pole_2[6][8] == 16) {
+                    square_surface_80 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][8] == 32 || pole_2[6][8] == 64) {
+                    square_surface_80 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_80 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_80 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2872,7 +3650,15 @@ int main()
             if (pole_2[6][9]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][9]);
-                square_surface_81 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][9] < 8) {
+                    square_surface_81 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][9] == 8 || pole_2[6][9] == 16) {
+                    square_surface_81 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][9] == 32 || pole_2[6][9] == 64) {
+                    square_surface_81 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_81 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_81 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2885,7 +3671,15 @@ int main()
             if (pole_2[6][10]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][10]);
-                square_surface_82 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][10] < 8) {
+                    square_surface_82 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][10] == 8 || pole_2[6][10] == 16) {
+                    square_surface_82 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][10] == 32 || pole_2[6][10] == 64) {
+                    square_surface_82 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_82 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_82 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2898,7 +3692,15 @@ int main()
             if (pole_2[6][11]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[6][11]);
-                square_surface_83 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[6][11] < 8) {
+                    square_surface_83 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[6][11] == 8 || pole_2[6][11] == 16) {
+                    square_surface_83 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[6][11] == 32 || pole_2[6][11] == 64) {
+                    square_surface_83 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_83 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_83 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2911,7 +3713,15 @@ int main()
             if (pole_2[7][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][0]);
-                square_surface_84 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][0] < 8) {
+                    square_surface_84 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][0] == 8 || pole_2[7][0] == 16) {
+                    square_surface_84 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][0] == 32 || pole_2[7][0] == 64) {
+                    square_surface_84 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_84 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_84 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2924,7 +3734,15 @@ int main()
             if (pole_2[7][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][1]);
-                square_surface_85 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][1] < 8) {
+                    square_surface_85 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][1] == 8 || pole_2[7][1] == 16) {
+                    square_surface_85 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][1] == 32 || pole_2[7][1] == 64) {
+                    square_surface_85 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_85 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_85 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2937,7 +3755,15 @@ int main()
             if (pole_2[7][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][2]);
-                square_surface_86 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][2] < 8) {
+                    square_surface_86 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][2] == 8 || pole_2[7][2] == 16) {
+                    square_surface_86 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][2] == 32 || pole_2[7][2] == 64) {
+                    square_surface_86 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_86 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_86 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2950,7 +3776,15 @@ int main()
             if (pole_2[7][3]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][3]);
-                square_surface_87 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][3] < 8) {
+                    square_surface_87 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][3] == 8 || pole_2[7][3] == 16) {
+                    square_surface_87 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][3] == 32 || pole_2[7][3] == 64) {
+                    square_surface_87 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_87 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_87 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2963,7 +3797,15 @@ int main()
             if (pole_2[7][4]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][4]);
-                square_surface_88 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][4] < 8) {
+                    square_surface_88 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][4] == 8 || pole_2[7][4] == 16) {
+                    square_surface_88 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][4] == 32 || pole_2[7][4] == 64) {
+                    square_surface_88 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_88 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_88 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2976,7 +3818,15 @@ int main()
             if (pole_2[7][5]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][5]);
-                square_surface_89 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][5] < 8) {
+                    square_surface_89 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][5] == 8 || pole_2[7][5] == 16) {
+                    square_surface_89 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][5] == 32 || pole_2[7][5] == 64) {
+                    square_surface_89 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_89 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_89 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -2989,7 +3839,15 @@ int main()
             if (pole_2[7][6]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][6]);
-                square_surface_90 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][6] < 8) {
+                    square_surface_90 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][6] == 8 || pole_2[7][6] == 16) {
+                    square_surface_90 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][6] == 32 || pole_2[7][6] == 64) {
+                    square_surface_90 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_90 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_90 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3002,7 +3860,15 @@ int main()
             if (pole_2[7][7]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][7]);
-                square_surface_91 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][7] < 8) {
+                    square_surface_91 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][7] == 8 || pole_2[7][7] == 16) {
+                    square_surface_91 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][7] == 32 || pole_2[7][7] == 64) {
+                    square_surface_91 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_91 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_91 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3015,7 +3881,15 @@ int main()
             if (pole_2[7][8]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][8]);
-                square_surface_92 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][8] < 8) {
+                    square_surface_92 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][8] == 8 || pole_2[7][8] == 16) {
+                    square_surface_92 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][8] == 32 || pole_2[7][8] == 64) {
+                    square_surface_92 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_92 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_92 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3028,7 +3902,15 @@ int main()
             if (pole_2[7][9]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][9]);
-                square_surface_93 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][9] < 8) {
+                    square_surface_93 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][9] == 8 || pole_2[7][9] == 16) {
+                    square_surface_93 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][9] == 32 || pole_2[7][9] == 64) {
+                    square_surface_93 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_93 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_93 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3041,7 +3923,15 @@ int main()
             if (pole_2[7][10]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][10]);
-                square_surface_94 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][10] < 8) {
+                    square_surface_94 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][10] == 8 || pole_2[7][10] == 16) {
+                    square_surface_94 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][10] == 32 || pole_2[7][10] == 64) {
+                    square_surface_94 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_94 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_94 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3054,7 +3944,15 @@ int main()
             if (pole_2[7][11]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_2[7][11]);
-                square_surface_95 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_2[7][11] < 8) {
+                    square_surface_95 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_2[7][11] == 8 || pole_2[7][11] == 16) {
+                    square_surface_95 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_2[7][11] == 32 || pole_2[7][11] == 64) {
+                    square_surface_95 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_95 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_95 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3282,10 +4180,18 @@ int main()
             if (pole_3[0][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_3[0][0]);
-                square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_3[0][0] < 8) {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_3[0][0] == 8 || pole_3[0][0] == 16) {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_3[0][0] == 32 || pole_3[0][0] == 64) {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_0 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_0 = TTF_RenderText_Solid(sans, "", RGB_yellow);
-            }
+            }            
             SDL_Texture * square_texture_0 = SDL_CreateTextureFromSurface(renderer, square_surface_0);
             SDL_RenderCopy(renderer, square_texture_0, NULL, &square_rect_0);
             
@@ -3295,7 +4201,15 @@ int main()
             if (pole_3[0][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_3[0][1]);
-                square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_3[0][1] < 8) {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_3[0][1] == 8 || pole_3[0][1] == 16) {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_3[0][1] == 32 || pole_3[0][1] == 64) {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_1 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_1 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3308,7 +4222,15 @@ int main()
             if (pole_3[0][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_3[0][2]);
-                square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_3[0][2] < 8) {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_3[0][2] == 8 || pole_3[0][2] == 16) {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_3[0][2] == 32 || pole_3[0][2] == 64) {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_2 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_2 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3321,7 +4243,15 @@ int main()
             if (pole_3[1][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_3[1][0]);
-                square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_3[1][0] < 8) {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_3[1][0] == 8 || pole_3[1][0] == 16) {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_3[1][0] == 32 || pole_3[1][0] == 64) {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_3 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_3 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3334,7 +4264,15 @@ int main()
             if (pole_3[1][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_3[1][1]);
-                square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_3[1][1] < 8) {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_3[1][1] == 8 || pole_3[1][1] == 16) {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_3[1][1] == 32 || pole_3[1][1] == 64) {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_4 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_4 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3347,7 +4285,15 @@ int main()
             if (pole_3[1][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_3[1][2]);
-                square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_3[1][2] < 8) {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_3[1][2] == 8 || pole_3[1][2] == 16) {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_3[1][2] == 32 || pole_3[1][2] == 64) {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_5 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_5 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3360,7 +4306,15 @@ int main()
             if (pole_3[2][0]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_3[2][0]);
-                square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_3[2][0] < 8) {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_3[2][0] == 8 || pole_3[2][0] == 16) {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_3[2][0] == 32 || pole_3[2][0] == 64) {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_6 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_6 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3373,7 +4327,15 @@ int main()
             if (pole_3[2][1]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_3[2][1]);
-                square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_3[2][1] < 8) {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_3[2][1] == 8 || pole_3[2][1] == 16) {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_3[2][1] == 32 || pole_3[2][1] == 64) {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_7 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_7 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
@@ -3386,7 +4348,15 @@ int main()
             if (pole_3[2][2]) {
                 char ch[5];
                 sprintf(ch, "%d", pole_3[2][2]);
-                square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                if (pole_3[2][2] < 8) {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_white);
+                } else if (pole_3[2][2] == 8 || pole_3[2][2] == 16) {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_orange_8);    
+                } else if (pole_3[2][2] == 32 || pole_3[2][2] == 64) {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_orange_32);
+                } else {
+                    square_surface_8 = TTF_RenderText_Solid(sans, ch, RGB_yellow);
+                }
             } else {
                 square_surface_8 = TTF_RenderText_Solid(sans, "", RGB_yellow);
             }
